@@ -1,3 +1,14 @@
+.main-content .image-container img[src="img1.png"] {
+  width: 300%; /* Ensure the image fills its container */
+  max-width: 300%; /* Ensure the image doesn't exceed its original size */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
+}
+
+
+
+
 .main-content .image-container .image-overlay {
   position: absolute;
   top: 50%;
@@ -20,18 +31,6 @@
   display: block; /* Ensure the image behaves as a block element */
   margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
   filter: grayscale(100%); /* Apply grayscale effect */
-}
-
-
-
-.main-content .image-container img1 {
-  image: center;
-  width: 300%; /* Ensure the image fills its container */
-  max-width: 300%; /* Ensure the image doesn't exceed its original size */
-  height: auto; /* Maintain aspect ratio */
-  
-  display: block; /* Ensure the image behaves as a block element */
-  margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
 }
 
 body {
