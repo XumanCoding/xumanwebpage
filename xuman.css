@@ -1,68 +1,111 @@
-/* Reset and Base Styles */
-* {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  .content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 600px) {
+    .content {
+      width: auto;
+      padding: 10px;
+    }
+  }
+
+
+body, h1, h2, p, ul {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f8f8f8;
   color: #333;
 }
 
-.container {
+container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header */
+/* Header Styles */
 header {
-  position: relative;
-  overflow: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 20px 0;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+contact-info {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: float 3s infinite alternate ease-in-out;
+contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #343a40;
 }
 
-.profile-text {
-  margin-top: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+contact-info ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.profile:hover .profile-text {
-  opacity: 1;
-  transform: translateY(0);
+contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.profile-text h1,
-.profile-text h4,
-.profile-text p {
-  color: white;
-  animation: fadeIn 1s forwards;
+contact-info ul li strong {
+    font-weight: bold;
 }
 
-/* Navigation */
+contact-info ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+contact-info ul li a:hover {
+    color: #0056b3;
+}
+
+contact-info ul li a::before {
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* Navigation Styles */
 nav {
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: gray;
   padding: 10px 0;
-  text-align: center;
 }
 
 nav ul {
@@ -70,62 +113,77 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline;
   margin-right: 20px;
 }
 
-nav ul li:last-child {
-  margin-right: 0;
-}
-
 nav ul li a {
+  color: black;
   text-decoration: none;
-  color: #333;
-  font-size: 1.2em;
-  transition: color 0.3s ease;
+  font-size: 18px;
 }
 
-nav ul li a:hover {
-  color: #764ba2;
+/* Main Section Styles */
+section {
+  padding: 60px 0;
 }
 
-/* Main Content */
-main {
-  padding: 40px 0;
+section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.section {
-  padding: 40px 0;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #764ba2;
-}
-
-.section p {
-  font-size: 1.1em;
+section p {
+  font-size: 18px;
   line-height: 1.6;
 }
 
-.about-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.about-content img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background-color: black;
   color: #fff;
-  padding: 20
-  
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+.contact-info {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+    .contact-info li strong {
+      display: inline-block;
+      width: 100px; /* Adjust as needed */
+    }
+    .email-btn,
+    .linkedin-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .email-btn:hover,
+    .linkedin-btn:hover {
+      background-color: #666;
+    }
+    .phone-number {
+      font-weight: bold;
+      color: black;
+    }
+
+h1{
+  color: chocolate;
+}
+h4{
+  color: lavender;
+}
+li
+  color: orange;
+}
+
