@@ -1,7 +1,7 @@
 
 /* Header Image Size */
 .sub-content img {
-  max-width: 300px; /* Adjust as needed */
+  max-width: 100px; /* Adjust as needed */
   width: 100%; /* Ensure the image fills its container */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Ensure the image is circular */
@@ -16,17 +16,9 @@
   width: 100%; /* Ensure the image fills its container */
   max-width: 100%; /* Ensure the image doesn't exceed its original size */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Ensure the image is circular */
+  
   display: block; /* Ensure the image behaves as a block element */
   margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
-  filter: grayscale(100%); /* Apply grayscale effect */
-}
-
-
-/* Global Styles */
-
-/* Other CSS styles */
-
 
 body {
   font-family: 'Roboto', sans-serif;
