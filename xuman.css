@@ -12,7 +12,7 @@
 }
 
 /* Centering About Image */
-.main-content .image-container img {
+.main-content .image-container img1 {
   width: 100%; /* Ensure the image fills its container */
   max-width: 100%; /* Ensure the image doesn't exceed its original size */
   height: auto; /* Maintain aspect ratio */
