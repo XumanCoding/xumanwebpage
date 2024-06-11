@@ -281,16 +281,12 @@ footer p {
   animation: slideIn 0.6s ease-out forwards;
   animation-delay: 0.3s;
                                }
-.sub-content .content img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 30px;
-            filter: grayscale(100%);
-}
-.sub-content .content img {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 20px;
-}
+
+  .sub-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    filter: grayscale(100%);
+  }
     
