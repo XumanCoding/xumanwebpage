@@ -1,55 +1,23 @@
-.main-content .image-container {
-  position: relative;
-  width: 100%;
-  max-width: 300px; /* Adjust as needed */
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-}
-
-.main-content .image-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.main-content .image-overlay {
-  position: absolute;
-  top: 50%;
-  left: 20%; /* Adjust as needed */
-  transform: translate(-50%, -50%);
-  text-align: left;
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.main-content .image-overlay p {
-  font-size: 1.2em;
-  color: white; /* Adjust text color as needed */
-}
-
-.main-content .image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-
-.sub-content img {
-  max-width: 100px; /* Adjust as needed */
-  width: 100%; /* Ensure the image fills its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Ensure the image is circular */
-  display: block; /* Ensure the image behaves as a block element */
-  margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
-  filter: grayscale(100%); /* Apply grayscale effect */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1.5em;
 }
 
 .container {
@@ -58,7 +26,7 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header */
 header {
   background: linear-gradient(to right, #007bff, #00bfff);
   color: #fff;
@@ -69,30 +37,28 @@ header {
 header h1 {
   font-size: 3em;
   margin-bottom: 10px;
-  animation: fadeInDown 1s ease;
+  animation: neonGlow 1s infinite alternate, glitch 1s infinite linear;
 }
 
 header h4 {
   font-size: 1.5em;
   margin-top: 0;
-  animation: fadeInUp 1s ease;
 }
 
-/* Navigation Styles */
+/* Navigation */
 nav {
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
   padding: 10px 0;
   text-align: center;
 }
 
+nav ul {
+  list-style-type: none;
+}
+
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin-right: 20px;
 }
 
@@ -111,20 +77,20 @@ nav ul li a:hover {
   color: #007bff;
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
   padding: 40px 0;
 }
 
 .section {
   padding: 40px 0;
+  text-align: center;
 }
 
 .section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  text-align: center;
-  animation: fadeInUp 1s ease;
+  animation: fadeInDown 1s ease;
 }
 
 .section p {
@@ -132,62 +98,59 @@ main {
   line-height: 1.6;
 }
 
-/* Skills Section Styles */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Image Styles */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
 }
 
-.skill {
-  width: calc(50% - 10px);
-  margin-bottom: 30px;
-  animation: fadeInLeft 1s ease;
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.skill:nth-child(odd) {
-  margin-right: 20px;
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 
-.skill h3 {
-  font-size: 1.5em;
+.image-container:hover .image-overlay {
+  opacity: 1;
 }
 
-/* Project Section Styles */
-.project {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  animation: fadeInRight 1s ease;
+.image-overlay p {
+  font-size: 1.2em;
+  color: white;
 }
 
-.project h3 {
-  font-size: 1.5em;
-  margin-top: 0;
+/* Sub Content */
+.sub-content img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-out;
 }
 
-.project p {
-  font-size: 1.1em;
+.sub-content img:hover {
+  filter: grayscale(0%);
 }
 
-/* Contact Section Styles */
-.contact-info {
-  list-style-type: none;
-  padding: 0;
-}
-
-.contact-info li {
-  margin-bottom: 10px;
-}
-
-.contact-info li a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
   background: linear-gradient(to right, #007bff, #00bfff);
   color: #fff;
@@ -242,17 +205,27 @@ footer p {
     opacity: 1;
     transform: translateX(0);
   }
-  }
+}
 
-/* Animations */
-@keyframes slideIn {
+/* Additional Animations */
+@keyframes neonGlow {
   from {
-    transform: translateY(50px);
-    opacity: 0;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #007bff, 0 0 20px #007bff, 0 0 25px #007bff, 0 0 30px #007bff, 0 0 35px #007bff;
   }
 }
 
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(0deg);
+  }
+  }
+  
