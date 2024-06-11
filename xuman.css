@@ -1,27 +1,38 @@
-.main-content .image-container img[src="img1.png"] {
-  width: 300%; /* Ensure the image fills its container */
-  max-width: 300%; /* Ensure the image doesn't exceed its original size */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure the image behaves as a block element */
-  margin: 0 auto 20px auto; /* Center the image horizontally and add bottom margin */
+.main-content .image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
 }
 
+.main-content .image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
 
-
-
-.main-content .image-container .image-overlay {
+.main-content .image-overlay {
   position: absolute;
   top: 50%;
   left: 10%; /* Adjust as needed */
   transform: translate(-50%, -50%);
-  text-align: left; /* Align text to the left */
+  text-align: left;
   opacity: 0;
   transition: opacity 0.4s ease-out;
+}
+
+.main-content .image-overlay p {
+  font-size: 1.2em;
+  color: white; /* Adjust text color as needed */
 }
 
 .main-content .image-container:hover .image-overlay {
   opacity: 1;
 }
+
 
 .sub-content img {
   max-width: 100px; /* Adjust as needed */
@@ -233,67 +244,6 @@ footer p {
   }
   }
 
-
-/* Main Content Styles */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.main-content .image-container {
-  position: relative;
-  width: 100%;
-  max-width: 300px; /* Adjust as needed */
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-}
-
-.main-content .image-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.main-content .image-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.main-content .image-container:hover::before {
-  opacity: 1;
-}
-
-.main-content .image-container .image-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 20%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.main-content .image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-
-.main-content .image-container .image-overlay p span {
-  display: block;
-  font-size: 0.8em;
-}
-
 /* Animations */
 @keyframes slideIn {
   from {
@@ -305,9 +255,4 @@ footer p {
     opacity: 1;
   }
 }
-
-.main-content .image-container .image-overlay {
-  animation: slideIn 0.6s ease-out forwards;
-  animation-delay: 0.3s;
-                               }
 
