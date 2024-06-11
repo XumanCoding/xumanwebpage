@@ -1,65 +1,201 @@
-.h1 {
-  color: #fff;
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
-.header-content {
-  color:white;
-            display: flex;
-            align-items: center;
-  background-color: black;
-            justify-content: center;
-        }
-        .header-content h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-        .header img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 30px;
-            filter: grayscale(10%);
-          }
-        section {
-            padding: 500px 80px 80px;
-            text-align: center;
-            margin-top: 80px;
-        }
-        .content img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 30px;
-            filter: grayscale(100%);
-        }
-        .content p {
-            margin-bottom: 15px;
-        }
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-        
-        /* Media Queries for Responsive Layout */
-        @media screen and (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-            }
-            .header-content img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            section {
-                padding-top: 100px;
-            }
-            .content img {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 20px;
-            }
-        }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #007bff, #00bfff);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+header h4 {
+  font-size: 1.5em;
+  margin-top: 0;
+  animation: fadeInUp 1s ease;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Main Content Styles */
+main {
+  padding: 40px 0;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Skills Section Styles */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  width: calc(50% - 10px);
+  margin-bottom: 30px;
+  animation: fadeInLeft 1s ease;
+}
+
+.skill:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.skill h3 {
+  font-size: 1.5em;
+}
+
+/* Project Section Styles */
+.project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeInRight 1s ease;
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.project p {
+  font-size: 1.1em;
+}
+
+/* Contact Section Styles */
+.contact-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(to right, #007bff, #00bfff);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  }
+  
