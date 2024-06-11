@@ -1,6 +1,6 @@
 
 /* Header Image Size */
-.main-content .image-container {
+.main-content .image-container img {
   max-width: 300px; /* Adjust as needed */
   margin: 0 auto; /* Center the image horizontally */
 }
