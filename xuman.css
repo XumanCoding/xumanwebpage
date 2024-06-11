@@ -1,3 +1,14 @@
+.main-content .image-container .image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  text-align: left; /* Align text to the left */
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+
 .sub-content img {
   max-width: 100px; /* Adjust as needed */
   width: 100%; /* Ensure the image fills its container */
