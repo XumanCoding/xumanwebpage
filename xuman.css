@@ -1,4 +1,4 @@
-.main-content .image-container .image-overlay p {
+.main-content .image-container .image-overlay {
   position: absolute;
   top: 50%;
   left: 10%; /* Adjust as needed */
@@ -8,6 +8,9 @@
   transition: opacity 0.4s ease-out;
 }
 
+.main-content .image-container:hover .image-overlay {
+  opacity: 1;
+}
 
 .sub-content img {
   max-width: 100px; /* Adjust as needed */
