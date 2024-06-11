@@ -11,8 +11,8 @@
 
 
 .main-content .image-container img1 {
-  width: 100%; /* Ensure the image fills its container */
-  max-width: 100%; /* Ensure the image doesn't exceed its original size */
+  width: 300%; /* Ensure the image fills its container */
+  max-width: 300%; /* Ensure the image doesn't exceed its original size */
   height: auto; /* Maintain aspect ratio */
   
   display: block; /* Ensure the image behaves as a block element */
