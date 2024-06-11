@@ -27,8 +27,7 @@ p {
 }
 /* Header */
 header {
-  background: skyblue(to right, #6a0dad, #8e24aa);
-  color: skyblue;
+  background: linear-gradient(to right, #007bff, #00bfff);  color: skyblue;
   padding: 40px 0;
   text-align: center;
 }
