@@ -286,12 +286,6 @@ footer p {
   opacity: 1;
 }
 
-.main-content .image-container .image-overlay p {
-  text-align: left;
-  color: #fff;
-  font-size: 1.2em;
-  margin: 0;
-}
 
 .main-content .image-container .image-overlay p span {
   display: block;
