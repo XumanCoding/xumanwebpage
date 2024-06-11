@@ -6,18 +6,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
-
-p {
-  margin-bottom: 1.5em;
 }
 
 .container {
@@ -25,24 +16,44 @@ p {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 /* Header */
 header {
-  background: linear-gradient(to right, #007bff, #00bfff);
+  background: linear-gradient(to right, #667eea, #764ba2);
   padding: 40px 0;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-header h1 {
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: float 3s infinite ease-in-out;
+}
+
+.profile-text {
+  margin-left: 20px;
+}
+
+.profile-text h1 {
   color: white;
-  font-size: 3em;
   margin-bottom: 10px;
-  }
+}
 
-header h4 {
+.profile-text h4 {
   color: white;
-  font-size: 1.5em;
-  margin-top: 0;
+  margin: 0;
+}
+
+.profile-text p {
+  color: white;
 }
 
 /* Navigation */
@@ -74,7 +85,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #764ba2;
 }
 
 /* Main Content */
@@ -85,12 +96,20 @@ main {
 .section {
   padding: 40px 0;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  animation: fadeInDown 1s ease;
+  color: #764ba2;
 }
 
 .section p {
@@ -98,61 +117,22 @@ main {
   line-height: 1.6;
 }
 
-/* Image Styles */
-.image-container {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 20px;
-  overflow: hidden;
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-content img {
+  max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-}
-
-.image-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.image-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-.image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-.image-overlay p {
-  font-size: 1.2em;
-  color: white;
-}
-
-/* Sub Content */
-.sub-content img {
-  max-width: 100px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px auto;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-out;
-}
-
-.sub-content img:hover {
-  filter: grayscale(0%);
+  margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-  background: linear-gradient(to right, #007bff, #00bfff);
+  background: linear-gradient(to right, #667eea, #764ba2);
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -163,69 +143,14 @@ footer p {
 }
 
 /* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
+  50% {
     transform: translateY(-20px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Additional Animations */
-@keyframes neonGlow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #007bff, 0 0 20px #007bff, 0 0 25px #007bff, 0 0 30px #007bff, 0 0 35px #007bff;
-  }
-}
-
-@keyframes glitch {
-  2%, 64% {
-    transform: translate(2px, 0) skew(0deg);
-  }
-  4%, 60% {
-    transform: translate(-2px, 0) skew(0deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(0deg);
+  100% {
+    transform: translateY(0px);
   }
   }
-  
