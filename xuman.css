@@ -25,10 +25,9 @@ p {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 /* Header */
 header {
-  background: linear-gradient(to right, #007bff, #00bfff);
+  background: linear-gradient(to right, #003333, #006666);
   color: #fff;
   padding: 40px 0;
   text-align: center;
