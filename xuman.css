@@ -1,190 +1,168 @@
-
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    width: 100%;
-    padding: 20px;
-  }
-  .content {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Media Query for Mobile Devices */
-  @media (max-width: 600px) {
-    .content {
-      width: auto;
-      padding: 10px;
-    }
-  }
-
-
-body, h1, h2, p, ul {
+/* Resetting default styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Global styles */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-  background-color: black;
+  background: #1e1e1e;
   color: #fff;
   padding: 20px 0;
 }
 
-contact-info {
-    background-color: #f8f9fa;
-    color: #343a40;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+header .logo {
+  display: block;
+  width: 150px;
+  height: auto;
 }
 
-contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #343a40;
+header .heading {
+  font-size: 28px;
+  font-weight: bold;
 }
 
-contact-info ul {
-    list-style-type: none;
-    padding: 0;
+header nav ul {
+  list-style: none;
 }
 
-contact-info ul li {
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-contact-info ul li strong {
-    font-weight: bold;
-}
-
-contact-info ul li a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-contact-info ul li a:hover {
-    color: #0056b3;
-}
-
-contact-info ul li a::before {
-    content: '\f0e0';
-    font-family: 'Font Awesome 5 Free';
-    margin-right: 5px;
-    font-weight: 900;
-}
-
-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-}
-
-/* Navigation Styles */
-nav {
-  background-color: gray;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
+header nav ul li {
   display: inline;
   margin-right: 20px;
 }
 
-nav ul li a {
-  color: black;
+header nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-/* Main Section Styles */
-section {
-  padding: 60px 0;
+header nav ul li a:hover {
+  color: #ff6f61;
 }
 
-section h2 {
-  font-size: 32px;
+/* About section styles */
+#about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#about p {
+  font-size: 18px;
+  color: #555;
   margin-bottom: 30px;
 }
 
-section p {
-  font-size: 18px;
-  line-height: 1.6;
+.profile-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
 }
 
-/* Footer Styles */
+/* Skills section styles */
+#skills {
+  padding: 50px 0;
+}
+
+#skills h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+#skills ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#skills li {
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+#skills li:first-child {
+  margin-left: 0;
+}
+
+#skills li:last-child {
+  margin-right: 0;
+}
+
+#skills li::before {
+  content: "\2022";
+  color: #ff6f61;
+  margin-right: 10px;
+}
+
+#skills li:last-child::after {
+  content: ".";
+}
+
+/* Contact section styles */
+#contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#contact p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
 footer {
-  background-color: black;
+  background: #1e1e1e;
   color: #fff;
   text-align: center;
   padding: 20px 0;
 }
 
-
-.contact-info {
-      list-style: none;
-      padding: 0;
-    }
-    .contact-info li {
-      margin-bottom: 10px;
-    }
-    .contact-info li strong {
-      display: inline-block;
-      width: 100px; /* Adjust as needed */
-    }
-    .email-btn,
-    .linkedin-btn {
-      display: inline-block;
-      padding: 8px 16px;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .email-btn:hover,
-    .linkedin-btn:hover {
-      background-color: #666;
-    }
-    .phone-number {
-      font-weight: bold;
-      color: black;
-    }
-
-h1{
-  color: chocolate;
-}
-h4{
-  color: lavender;
-}
-li
-  color: orange;
+footer p {
+  font-size: 16px;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover effects */
+a:hover {
+  text-decoration: underline;
+}
+
+#skills li:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
