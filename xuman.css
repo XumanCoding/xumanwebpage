@@ -11,6 +11,7 @@
 
 
 .main-content .image-container img1 {
+  image: center;
   width: 300%; /* Ensure the image fills its container */
   max-width: 300%; /* Ensure the image doesn't exceed its original size */
   height: auto; /* Maintain aspect ratio */
@@ -275,6 +276,7 @@ footer p {
 }
 
 .main-content .image-container .image-overlay p {
+  text-align: left;
   color: #fff;
   font-size: 1.2em;
   margin: 0;
