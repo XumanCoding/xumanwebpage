@@ -27,11 +27,12 @@ p {
 }
 /* Header */
 header {
-  background: linear-gradient(to right, #003333, #006666);
+  background: linear-gradient(to right, #6a0dad, #8e24aa);
   color: #fff;
   padding: 40px 0;
   text-align: center;
 }
+
 
 header h1 {
   font-size: 3em;
