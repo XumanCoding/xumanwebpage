@@ -1,4 +1,3 @@
-  <script>
     // JavaScript code
     document.addEventListener('DOMContentLoaded', function() {
       // Add smooth scrolling to all links
@@ -11,5 +10,3 @@
         });
       });
     });
-  </script>
-
