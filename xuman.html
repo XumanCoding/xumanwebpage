@@ -1,55 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suman M - Portfolio</title>
-  <link rel="stylesheet" href="xuman.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman - Professional Portfolio</title>
+    <link rel="stylesheet" href="premium.css">
 </head>
 <body>
-  <header>
+  
+<header class="header-image" id="header">
+        <img id="header-img" src="img.jpg" alt="Suman.img" onclick="toggleShadow()">
+  <h1>Suman M</h1>
+        <p>IT Professional</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
-      <img src="img1.png" alt="Suman M" class="logo">
-      <h1 class="heading">Suman M</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate software developer with a strong desire to learn and grow in the field of technology. During my studies, I focused on building a solid foundation in computer science, including algorithms, data structures, and software engineering principles.</p>
+            <p>My enthusiasm for coding led me to participate in various coding competitions and hackathons, where I collaborated with teams to develop innovative solutions.</p>
+            <h3>Education</h3>
+            <p>Bachelor of Science in Computer Science<br>Bharathidasan University, 2024</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages:  Python, JavaScript</li>
+                <li>Web Development: HTML5, CSS3, Bootstrap</li>
+                <li>Database Management: SQL, MongoDB,Excel</li>
+                <li>Version Control: Git, GitHub</li>
+            </ul>
+        </section>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive portfolio website showcasing my skills and projects.</p>
+        <p>Technologies used: HTML5, CSS3, JavaScript</p>
     </div>
-  </header>
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a recent graduate with a BSc in Computer Science. I am passionate about web development and software engineering.</p>
-      <img src="img.png" alt="Suman M" class="profile-img">
+    <div class="project">
+        <h3>Online Retail Store Project</h3>
+        <p>An database for the customer ,product and orders details.</p>
+        <p>Technologies used:  MySQL</p>
     </div>
-  </section>
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Front-End Web Development</li>
-        <li>Software Engineering</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Microsoft Excel</li>
-      </ul>
+    <div class="project">
+        <h3>URL Shortner</h3>
+        <p>A url shortner that short the length link into a shortren url.</p>
+        <p>Technologies used: Python, PyShortner</p>
     </div>
-  </section>
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: msuman04122003@gmail.com</p>
-      <p>Phone: +91 9344094262</p>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Suman.in.All right are reserved.</p>
-    </div>
-  </footer>
+</section>
+      
+      
+      <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: msuman04122003@gmail.com</p>
+    <p style="font-family: Arial, sans-serif; font-size: 16px;">
+  <span style="font-weight: bold; color: #0077B5;">LinkedIn:</span>
+  <a href="https://in.linkedin.com/in/suman-m-612384231?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" target="_blank" style="text-decoration: none; color: #0077B5;">
+    <span style="font-weight: bold;">Suman Profile </span>
+  </a>
+</p>
+    <form action="send_email.php" method="POST" class="contact-form">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+</section>
+    <footer>
+        <p>&copy; 2024 Suman. All rights are reserved.</p>
+        <div class="social-icons">
+            <!-- Social icons content -->
+        </div>
+    </footer>
+
 </body>
-</html>
+  </html>
